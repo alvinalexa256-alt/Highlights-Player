@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports 803 - Live Sports Streaming</title>
+
+  <!-- Primary Meta -->
+
+  <meta name="description" content="Watch live sports streams on Sports 803. Free HD streaming for football, soccer, and more." />
+
+  <!-- Open Graph (Facebook, Reddit) -->
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sports 803 - Live Sports Streaming" />
+  <meta property="og:description" content="Watch live sports streams on Sports 803. Free HD streaming for football, soccer, and more." />
+  <meta property="og:image" content="https://livetv.wtvpc.com/wp-content/uploads/2017/06/tv-image.gif" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://sports803livestream.blogspot.com" />
+  <meta property="og:site_name" content="Sports 803" />
+
+  <!-- Twitter Card -->
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sports 803 - Live Sports Streaming" />
+  <meta name="twitter:description" content="Watch live sports streams on Sports 803. Free HD streaming for football, soccer, and more." />
+  <meta name="twitter:image" content="https://livetv.wtvpc.com/wp-content/uploads/2017/06/tv-image.gif" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+
+</head>
+<body>
+  <iframe id="embedFrame" src="" allowfullscreen allow="autoplay; fullscreen"></iframe>
+  <script>
+    var DEFAULT_URL = "https://sports803livestream.blogspot.com";
+    var params = new URLSearchParams(window.location.search);
+    var embed = params.get("embed");
+    var target = embed ? decodeURIComponent(embed) : DEFAULT_URL;
+
+```
+// Basic safety: only allow http/https URLs
+if (!/^https?:\/\//i.test(target)) {
+  target = DEFAULT_URL;
+}
+
+document.getElementById("embedFrame").src = target;
+```
+
+  </script>
+</body>
+</html>
